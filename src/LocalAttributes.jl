@@ -1,0 +1,22 @@
+module LocalAttributes
+
+# Imports
+using FFTW
+using LinearAlgebra
+
+# Includes
+include("Conjgrad.jl")
+include("Doubleint.jl")
+include("Fold.jl")
+include("Ricker.jl")
+include("Smooth.jl")
+include("Smooth1D.jl")
+include("SmoothDivision.jl")
+
+# Exports
+export conjgrad, 
+       ricker, 
+       smooth, 
+       smooth_division
+
+end
