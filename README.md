@@ -14,7 +14,7 @@ Local seismic attributes measure seismic signal characteristics not instantaneou
 ## Installation
 
 ```julia
-julia> using Pkg: add
+julia> using Pkg
 
 julia> add("LocalAttributes")
 
