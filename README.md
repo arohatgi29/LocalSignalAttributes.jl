@@ -24,9 +24,9 @@ julia> using LocalAttributes
 
 ## Features
 
-### Strings
+### conjgrad
 
-- Conjugate-gradient algorithm for shaping regularization using `conjgrad(forward::Function, adjoint::Function, shaping::Function, ϵ::Float64, d::Array, p0::Array, niter::Int)`
+- Conjugate-gradient algorithm for shaping regularization using `(forward::Function, adjoint::Function, shaping::Function, ϵ::Float64, d::Array, p0::Array, niter::Int)`
 
 ### smooth
 
