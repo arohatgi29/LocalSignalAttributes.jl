@@ -1,15 +1,15 @@
 ```@meta
-CurrentModule = LocalAttributes
+CurrentModule = LocalSeismicAttributes
 ```
 
-# LocalAttributes
+# LocalSeismicAttributes
 
-Documentation for [LocalAttributes](https://github.com/arohatgi29/LocalAttributes.jl).
+Documentation for [LocalSeismicAttributes](https://github.com/arohatgi29/LocalSeismicAttributes.jl).
 
 Package for local attributes
 
 ## Install
 
 ```julia-repl
-pkg> add https://github.com/arohatgi29/LocalAttributes.jl
+pkg> add https://github.com/arohatgi29/LocalSeismicAttributes.jl
 ```

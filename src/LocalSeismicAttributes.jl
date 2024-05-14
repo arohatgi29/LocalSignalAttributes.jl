@@ -1,4 +1,4 @@
-module LocalAttributes
+module LocalSeismicAttributes
 
 # Imports
 using FFTW

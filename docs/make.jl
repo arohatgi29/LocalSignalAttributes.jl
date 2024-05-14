@@ -1,14 +1,14 @@
-using LocalAttributes
+using LocalSeismicAttributes
 using Documenter
 
-DocMeta.setdocmeta!(LocalAttributes, :DocTestSetup, :(using LocalAttributes); recursive=true)
+DocMeta.setdocmeta!(LocalSeismicAttributes, :DocTestSetup, :(using LocalSiesmicAttributes); recursive=true)
 
 makedocs(;
-    modules=[LocalAttributes],
+    modules=[LocalSeismicAttributes],
     authors="Akshika Rohatgi",
-    sitename="LocalAttributes.jl",
+    sitename="LocalSeismicAttributes.jl",
     format=Documenter.HTML(;
-        canonical="https://arohatgi29.github.io/LocalAttributes.jl",
+        canonical="https://arohatgi29.github.io/LocalSeismicAttributes.jl",
         edit_link="main",
         assets=String[],
     ),
@@ -19,6 +19,6 @@ makedocs(;
 )
 
 deploydocs(;
-    repo="github.com/arohatgi29/LocalAttributes.jl",
+    repo="github.com/arohatgi29/LocalSeismicAttributes.jl",
     devbranch="main",
 )

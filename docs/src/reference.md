@@ -1,10 +1,10 @@
 ```@meta
-CurrentModule = LocalAttributes
+CurrentModule = LocalSeismicAttributes
 ```
 
 ```@index
 ```
 
 ```@autodocs
-Modules = [LocalAttributes]
+Modules = [LocalSeismicAttributes]
 ```
