@@ -6,9 +6,10 @@ CurrentModule = LocalAttributes
 
 Documentation for [LocalAttributes](https://github.com/arohatgi29/LocalAttributes.jl).
 
-```@index
-```
+Package for local attributes
 
-```@autodocs
-Modules = [LocalAttributes]
+## Install
+
+```julia-repl
+pkg> add https://github.com/arohatgi29/LocalAttributes.jl
 ```
