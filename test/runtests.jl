@@ -1,7 +1,7 @@
-using LocalAttributes
+using LocalSignalAttributes
 using Test
 
-@testset "LocalAttributes.jl" begin
+@testset "LocalSignalAttributes.jl" begin
 
     # Test case for ricker function
     input = [0, 0, 0, 1, 0, 0, 0]  

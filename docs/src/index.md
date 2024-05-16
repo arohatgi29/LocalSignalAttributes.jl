@@ -1,15 +1,15 @@
 ```@meta
-CurrentModule = LocalAttributes
+CurrentModule = LocalSignalAttributes
 ```
 
-# LocalAttributes
+# LocalSignalAttributes
 
-Documentation for [LocalAttributes](https://github.com/arohatgi29/LocalAttributes.jl).
+Documentation for [LocalSignalAttributes](https://github.com/arohatgi29/LocalSignalAttributes.jl).
 
 Package for local attributes
 
 ## Install
 
 ```julia-repl
-pkg> add https://github.com/arohatgi29/LocalAttributes.jl
+pkg> add https://github.com/arohatgi29/LocalSignalAttributes.jl
 ```

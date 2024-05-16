@@ -1,4 +1,4 @@
-module LocalAttributes
+module LocalSignalAttributes
 
 # Imports
 using FFTW

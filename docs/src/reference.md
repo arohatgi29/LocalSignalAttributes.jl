@@ -1,10 +1,10 @@
 ```@meta
-CurrentModule = LocalAttributes
+CurrentModule = LocalSignalAttributes
 ```
 
 ```@index
 ```
 
 ```@autodocs
-Modules = [LocalAttributes]
+Modules = [LocalSignalAttributes]
 ```

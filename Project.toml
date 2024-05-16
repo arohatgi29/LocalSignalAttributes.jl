@@ -1,4 +1,4 @@
-name = "LocalAttributes"
+name = "LocalSignalAttributes"
 uuid = "0a92bf9b-4da3-44e8-9286-830175b27cf8"
 authors = ["Akshika Rohatgi, Sergey Fomel"]
 version = "1.0.0"
