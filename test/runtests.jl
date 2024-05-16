@@ -1,7 +1,7 @@
-using LocalSeismicAttributes
+using LocalAttributes
 using Test
 
-@testset "LocalSeismicAttributes.jl" begin
+@testset "LocalAttributes.jl" begin
 
     # Test case for ricker function
     input = [0, 0, 0, 1, 0, 0, 0]  

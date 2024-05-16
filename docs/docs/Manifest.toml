@@ -172,7 +172,7 @@ version = "1.17.0+0"
 deps = ["Libdl", "OpenBLAS_jll", "libblastrampoline_jll"]
 uuid = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 
-[[deps.LocalSeismicAttributes]]
+[[deps.LocalAttributes]]
 deps = ["FFTW", "LinearAlgebra"]
 path = "../.."
 uuid = "0a92bf9b-4da3-44e8-9286-830175b27cf8"
