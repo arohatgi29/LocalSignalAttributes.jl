@@ -1,4 +1,4 @@
-function smooth(x::Vector{T}, nb::Int) where T <: Real
+function smooth(x::Vector{T}, nb::Int, der=false) where T <: Real
     "smoothing by triangle filtering with reflecting boundaries"
     n = length(x)
     t = zeros(T,n+2*nb)
@@ -8,6 +8,6 @@ function smooth(x::Vector{T}, nb::Int) where T <: Real
         t[i+nb] += 2*xi
         t[i+2*nb] -= xi
     end
-    doubint!(t)
+    doubint!(t, der)
     return fold(t, nb)
 end
