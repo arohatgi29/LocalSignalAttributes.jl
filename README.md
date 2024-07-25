@@ -16,7 +16,7 @@ Local attributes measure signal characteristics not instantaneously at each sign
 ```julia
 julia> using Pkg
 
-julia> add("LocalSignalAttributes")
+julia> Pkg.add("LocalSignalAttributes")
 
 julia> using LocalSignalAttributes
 ```
