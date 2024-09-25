@@ -41,5 +41,8 @@ julia> using LocalSignalAttributes
 
 - divides two signals, producing a smooth output using `(numerator::Array, denominator::Array, radius::Vector{Int}, niter::Int)`
 - It treats division as inversion and regularizes the inversion using shaping regularization. 
-  
+
+### hilbert
+
+- Digital Hilbert transform using  `(x::Vector{T}, order::Int)`
 
