@@ -12,6 +12,7 @@ include("Ricker.jl")
 include("Smooth.jl")
 include("Smooth1D.jl")
 include("SmoothDivision.jl")
+include("Hilbert.jl")
 
 # Exports
 export conjgrad, 
