@@ -43,4 +43,24 @@ using Test
    output_smooth_division = smooth_division(numerator, denominator, radius, niterations)
    @test output_smooth_division ≈ expected_output_smooth_division atol=1e-6
 
+   # Test for Hilbert
+   time= range(start=-0.8, step=0.004, length=10)
+   signal = cos.(10*π*time .* (1 .+ 0.5*time));
+   order = 200
+
+   expected_output_hilbert = 
+   [-0.2874437040916611
+    -0.2885828660794889
+    -0.29088594524740863
+    -0.2936094264330329
+    -0.2967589011785119
+    -0.29994399158363105
+    -0.30316175842461224
+    -0.30600529028484935
+    -0.30846513336674164
+    -0.30970403176420547]
+ 
+    output_hilbert = hilbert(signal, order)
+    @test output_hilbert ≈ expected_output_hilbert atol=1e-6
+
 end

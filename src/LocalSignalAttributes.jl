@@ -18,6 +18,7 @@ include("Hilbert.jl")
 export conjgrad, 
        ricker, 
        smooth, 
-       smooth_division
+       smooth_division,
+       hilbert
 
 end
