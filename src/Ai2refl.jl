@@ -11,5 +11,3 @@ function ai2refl(ai::Vector{T}) where T <: Real
 	ref[nt] = zero(T)
     return ref
 end
-
-ref = ai2refl(ai);
