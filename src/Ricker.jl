@@ -1,6 +1,6 @@
 using FFTW
-
-function ricker(input::Array, dt::Float64, f::Float64)  
+ 
+function ricker(input::Array; dt=1.0, f=0.2)  
     # Fourier transform
     fourier = rfft(input)
     nt = length(input)
@@ -12,3 +12,5 @@ function ricker(input::Array, dt::Float64, f::Float64)
     @. fourier *= freq * exp(1 - freq)
     return irfft(fourier, nt)
 end
+
+# sfricker2

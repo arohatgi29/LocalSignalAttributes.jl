@@ -1,4 +1,4 @@
-function smooth_division(numerator::Array, denominator::Array, radius::Vector{Int}, niter::Int)
+function smooth_division(numerator::Array, denominator::Array, radius::Vector{Int}; niter=100)
     n = length(numerator)
     p0 = similar(numerator)
     fill!(p0, zero(eltype(p0)))

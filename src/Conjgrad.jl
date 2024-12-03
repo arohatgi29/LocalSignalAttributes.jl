@@ -1,7 +1,6 @@
 using LinearAlgebra
 
-function conjgrad(forward::Function, adjoint::Function, shaping::Function, 
-    ϵ::Float64, d::Array, p0::Array, niter::Int, tolerance::Float64)
+function conjgrad(forward::Function, adjoint::Function, shaping::Function, d::Array, p0::Array; ϵ=1.0,  niter=1, tolerance= 1.0e-7)
 "Conjugate-gradient algorithm for shaping regularization"
 p = deepcopy(p0)
 x = shaping(p)

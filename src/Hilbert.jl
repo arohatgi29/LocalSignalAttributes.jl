@@ -1,4 +1,4 @@
-function hilbert(x::Vector{T}, order::Int) where T <: Real
+function hilbert(x::Vector{T}; order=100) where T <: Real
     "digital Hilbert transform"
     n = length(x) # nt
     t, y = deepcopy(x), similar(x) # h, trace2
