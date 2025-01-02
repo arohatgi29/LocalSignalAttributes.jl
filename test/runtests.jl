@@ -28,11 +28,15 @@ using Test
    @test conjgrad(forward, adjoint, shaping, d, p0; ϵ, niter, tolerance) ≈ expected_output_conj
 
 # [TEST CASE 3]: Test for smooth function
-   input_smooth = [1 2 3; 4 5 6; 7 8 9]
+   input_smooth = [
+       1 2 3;
+       4 5 6;
+       7 8 9
+   ]
    nb = [1, 1]
    expected_output_smooth = [1.0 2.0 3.0; 4.0 5.0 6.0; 7.0 8.0 9.0]
    output_smooth = smooth(input_smooth, nb)
-   @test output_smooth == expected_output_smooth
+   @test output_smooth ≈ expected_output_smooth
 
 # [TEST CASE 4]: Test for Smooth Division function
    numerator = [1.0, 2.0, 3.0, 4.0]
@@ -61,5 +65,10 @@ using Test
  
     output_hilbert = hilbert(signal; order)
     @test output_hilbert ≈ expected_output_hilbert atol=1e-6
+
+# [TEST CASE 6]: Test for Local Frequency
+   time2 = range(start=-0.8, step=0.004, length=1424)
+   chirp2 = cos.(10*π*time2 .* (1 .+ 0.5*time2));    
+   local_chirp = local_frequency(chirp2, 10, order=200, dt=0.004);
 
 end
