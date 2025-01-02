@@ -38,9 +38,8 @@ using Test
    numerator = [1.0, 2.0, 3.0, 4.0]
    denominator = [0.1, 0.2, 0.3, 0.4]
    radius = [5]
-   niterations = 10
    expected_output_smooth_division = [9.99999999483288, 10.00000001181633, 9.999999990811466, 10.000000002537154]
-   output_smooth_division = smooth_division(numerator, denominator, radius; niterations)
+   output_smooth_division = smooth_division(numerator, denominator, radius)
    @test output_smooth_division ≈ expected_output_smooth_division atol=1e-6
 
 # [TEST CASE 5]: Test for Hilbert

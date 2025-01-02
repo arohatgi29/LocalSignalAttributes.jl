@@ -1,6 +1,11 @@
 using LinearAlgebra
 
-function conjgrad(forward::Function, adjoint::Function, shaping::Function, d::Array, p0::Array; ϵ=1.0,  niter=1, tolerance= 1.0e-7)
+const DEFAULT_ϵ = 1.0
+const DEFAULT_TOLERANCE = 1.0e-7
+const DEFAULT_NITER = 1
+
+function conjgrad(forward::Function, adjoint::Function, shaping::Function, d::Array, p0::Array;
+                  ϵ=DEFAULT_ϵ, niter=DEFAULT_NITER, tolerance=DEFAULT_TOLERANCE)
 "Conjugate-gradient algorithm for shaping regularization"
 p = deepcopy(p0)
 x = shaping(p)
