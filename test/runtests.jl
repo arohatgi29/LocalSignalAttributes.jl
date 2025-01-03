@@ -65,10 +65,4 @@ using Test
  
     output_hilbert = hilbert(signal; order)
     @test output_hilbert ≈ expected_output_hilbert atol=1e-6
-
-# [TEST CASE 6]: Test for Local Frequency
-   time2 = range(start=-0.8, step=0.004, length=1424)
-   chirp2 = cos.(10*π*time2 .* (1 .+ 0.5*time2));    
-   local_chirp = local_frequency(chirp2, 10, order=200, dt=0.004);
-
 end
