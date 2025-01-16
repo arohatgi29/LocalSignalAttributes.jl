@@ -73,16 +73,16 @@ using Test
 
    @test size(inst_signal) == size(signal)
 
-   expected_inst_chirp_1 = 8.702030607025977e-12
-   expected_inst_chirp_200 = 4.930558808579891
-   expected_inst_chirp_400 = 8.979962425480627
-   expected_inst_chirp_600 = 12.979998161034956
-   expected_inst_chirp_800 = 16.979997596140944
+   expected_inst_signal_1 = 8.702030607025977e-12
+   expected_inst_signal_200 = 4.930558808579891
+   expected_inst_signal_400 = 8.979962425480627
+   expected_inst_signal_600 = 12.979998161034956
+   expected_inst_signal_800 = 16.979997596140944
 
-   @test inst_chirp[1] ≈ expected_inst_chirp_1 atol=1e-6
-   @test inst_chirp[200] ≈ expected_inst_chirp_200 atol=1e-6
-   @test inst_chirp[400] ≈ expected_inst_chirp_400 atol=1e-6
-   @test inst_chirp[600] ≈ expected_inst_chirp_600 atol=1e-6
-   @test inst_chirp[800] ≈ expected_inst_chirp_800 atol=1e-6     
+   @test inst_signal[1] ≈ expected_inst_chirp_1 atol=1e-6
+   @test inst_signal[200] ≈ expected_inst_chirp_200 atol=1e-6
+   @test inst_signal[400] ≈ expected_inst_chirp_400 atol=1e-6
+   @test inst_signal[600] ≈ expected_inst_chirp_600 atol=1e-6
+   @test inst_signal[800] ≈ expected_inst_chirp_800 atol=1e-6     
 
 end
