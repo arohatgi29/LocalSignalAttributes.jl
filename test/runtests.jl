@@ -79,7 +79,7 @@ using Test
    expected_inst_signal_600 = 12.979998161034956
    expected_inst_signal_800 = 16.979997596140944
 
-   @test inst_signal[1] ≈ expected_inst_chirp_1 atol=1e-6
+   @test inst_signal[1] ≈ expected_inst_signal_1 atol=1e-6
    @test inst_signal[200] ≈ expected_inst_signal_200 atol=1e-6
    @test inst_signal[400] ≈ expected_inst_signal_400 atol=1e-6
    @test inst_signal[600] ≈ expected_inst_signal_600 atol=1e-6
