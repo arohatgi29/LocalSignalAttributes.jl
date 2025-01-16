@@ -15,11 +15,13 @@ include("Smooth.jl")
 include("Smooth1D.jl")
 include("SmoothDivision.jl")
 include("Hilbert.jl")
+include("LocalFrequency.jl")
 
 # Exports
 export conjgrad, 
        ricker, 
        smooth, 
        smooth_division,
-       hilbert
+       hilbert,
+       local_frequency     
 end
