@@ -23,5 +23,6 @@ export conjgrad,
        smooth, 
        smooth_division,
        hilbert,
+       deriv,
        local_frequency     
 end
