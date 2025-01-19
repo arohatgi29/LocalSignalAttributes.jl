@@ -18,7 +18,8 @@ makedocs(;
     ],
 )
 
-deploydocs(;
-    repo="github.com/arohatgi29/LocalSignalAttributes.jl",
-    devbranch="main",
+deploydocs(
+    repo = "https://github.com/arohatgi29/LocalSignalAttributes.jl",  # Full HTTPS URL
+    devbranch = "main",  
 )
+
