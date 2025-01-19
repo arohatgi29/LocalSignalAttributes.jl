@@ -19,7 +19,6 @@ makedocs(;
 )
 
 deploydocs(
-    repo = "https://github.com/arohatgi29/LocalSignalAttributes.jl",  # Full HTTPS URL
-    devbranch = "main",  
+    repo = "https://github.com/arohatgi29/LocalSignalAttributes.jl",
+    branch = "gh-pages"
 )
-
