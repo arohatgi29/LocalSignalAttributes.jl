@@ -4,29 +4,22 @@ on:
   push:
     branches:
       - main
-      - master  # Update this if your default branch is not "main"
+    tags: '*'
 
 jobs:
   build:
+    permissions:
+      contents: write
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-
-    - name: Set up Julia
-      uses: julia-actions/setup-julia@v1
-      with:
-        version: '1.9'  # or your preferred Julia version
-
-    - name: Install dependencies
-      run: julia --project=docs -e 'using Pkg; Pkg.instantiate()'
-
-    - name: Build documentation
-      run: julia --project=docs docs/make.jl
-
-    - name: Deploy documentation
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: docs/build
+      - uses: actions/checkout@v3
+      
+      - uses: julia-actions/setup-julia@latest
+      
+      - name: Install dependencies
+        run: julia --project=docs/ -e 'using Pkg; Pkg.develop(PackageSpec(path=pwd())); Pkg.instantiate()'
+      
+      - name: Build and deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # For authentication with GitHub Actions token
+        run: julia --project=docs/ docs/make.jl
