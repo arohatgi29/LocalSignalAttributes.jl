@@ -1,6 +1,6 @@
 # LocalSignalAttributes
 
-[![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://arohatgi29.github.io/LocalSignalAttributes.jl/stable/)
+[![Stable](https://img.shields.io/badge/docs-stable-blue.svg)](https://arohatgi29.github.io/LocalSignalAttributes.jl/)
 [![Build Status](https://github.com/arohatgi29/LocalSignalAttributes.jl/actions/workflows/CI.yml/badge.svg?branch=main)](https://github.com/arohatgi29/LocalSignalAttributes.jl/actions/workflows/CI.yml?query=branch%3Amain)
 
 
