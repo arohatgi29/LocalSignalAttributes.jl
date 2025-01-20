@@ -19,6 +19,6 @@ makedocs(;
 )
 
 deploydocs(
-    repo = "https://github.com/arohatgi29/LocalSignalAttributes.jl",
-    branch = "gh-pages"
+    repo = "github.com/arohatgi29/LocalSignalAttributes.jl",
+    devbranch="main",
 )
