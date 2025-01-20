@@ -1,12 +1,12 @@
-using LocalSignalAttributes
+using Plus
 using Documenter
 
-DocMeta.setdocmeta!(LocalSignalAttributes, :DocTestSetup, :(using LocalSignalAttributes); recursive=true)
+DocMeta.setdocmeta!(Plus, :DocTestSetup, :(using Plus); recursive=true)
 
 makedocs(;
-    modules=[LocalSignalAttributes],
+    modules=[Plus],
     authors="Akshika Rohatgi",
-    sitename="LocalSignalAttributes.jl",
+    sitename="Plus.jl",
     format=Documenter.HTML(;
         canonical="https://arohatgi29.github.io/LocalSignalAttributes.jl",
         edit_link="main",
@@ -14,11 +14,11 @@ makedocs(;
     ),
     pages=[
         "Home" => "index.md",
-        "Reference" => "reference.md",
+        "Tutorial" => "tutorial.md",
     ],
 )
 
-deploydocs(
-    repo = "github.com/arohatgi29/LocalSignalAttributes.jl",
+deploydocs(;
+    repo="github.com/arohatgi29/LocalSignalAttributes.jl",
     devbranch="main",
 )
