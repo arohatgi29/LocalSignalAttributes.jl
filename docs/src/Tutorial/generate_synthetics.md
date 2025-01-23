@@ -48,19 +48,7 @@ The plot will display the Ricker wavelet with its amplitude versus time, providi
 
 ### Generating Toy Seismic Synthetic (A Flat Event)
 
-### Code:
-
 ```julia-repl
-using LocalSignalAttributes
-using Plots
-
-# Generate a Ricker wavelet
-nt = 201               # Number of time samples
-dt = 0.004             # Time sampling interval (seconds)
-spike = zeros(Float32, nt)
-spike[1 + (nt - 1) ÷ 2] = one(Float32)
-t = range(start=0, step=dt, length=nt)
-ricker1 = ricker(spike; dt=dt, f=25.0)
 
 # Create a flat event (multiple identical traces)
 ntraces = 4096
@@ -73,7 +61,14 @@ noisy_traces = traces .+ randn(size(traces)) * 0.1
 # Plot the noisy flat event as a heatmap
 heatmap(1:ntraces, t, noisy_traces, 
         yflip=true, cmap=:grays, 
-        title="Input", ylabel="Time (s)", xlabel="Trace")
+        title="Seismic Synthetic", ylabel="Time (s)", xlabel="Trace")
 ```
-
 ![Seismic Synthetic with one flat event](../assets/synthetic.png)
+
+Output:
+
+The heatmap shows the synthetic seismic data with time on the vertical axis, trace number on the horizontal axis, and amplitude represented by intensity.
+
+Without Noise: Uncomment the line # noisy_traces = traces to visualize the flat event without any noise.
+
+With Noise: Default visualization includes Gaussian noise (σ = 0.1) added to the flat event.
