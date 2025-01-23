@@ -16,6 +16,7 @@ makedocs(;
         "Home" => "index.md",
         "Tutorial" => [
             "Generate Synthetics" => "Tutorial/generate_synthetics.md",
+        ],
     ],
 )
 
