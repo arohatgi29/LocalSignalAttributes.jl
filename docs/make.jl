@@ -14,7 +14,8 @@ makedocs(;
     ),
     pages=[
         "Home" => "index.md",
-        "Tutorial" => [generate_synthetics.md],
+        "Tutorial" => [
+            "Generate Synthetics" => "Tutorial/generate_synthetics.md",
     ],
 )
 
