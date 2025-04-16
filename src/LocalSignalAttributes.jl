@@ -26,6 +26,7 @@ include("DynamicProgTrajectory.jl")
 include("AutoPicking.jl")
 include("PartialSum.jl")
 include("InterLeave.jl")
+include("LocalFrequency1D.jl")
 
 # Exports
 export conjgrad, 

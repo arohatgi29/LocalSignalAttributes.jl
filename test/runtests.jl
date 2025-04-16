@@ -78,7 +78,7 @@ using Test
 # [TEST CASE 6]: Test for Local Frequency
    time = range(start=-0.8, step=0.004, length=1424)
    signal = cos.(10 * π * time .* (1 .+ 0.5 * time))
-   inst_signal = local_frequency(signal, [1]; order=200, dt=0.004)
+   inst_signal = local_frequency1(signal, [1]; order=200, dt=0.004)
 
    @test size(inst_signal) == size(signal)
 
