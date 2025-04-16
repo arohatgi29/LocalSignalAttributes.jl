@@ -20,7 +20,7 @@ function conjgrad(forward::Function, adjoint::Function, shaping::Function, ϵ::F
       else
           β = gn/gnp
     γ = gn/g0
-    if (β < tol || gn/g0 < tol)
+    if (β < tolerance || gn/g0 < tolerance)
       println("converged: β=$(β) γ=$(γ)")
       break
     end
