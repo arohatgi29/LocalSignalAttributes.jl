@@ -1,4 +1,4 @@
-function deriv(x::Vector{T}; order=6) where T <: Real
+function deriv(x::Vector{T}, order::Int) where T <: Real
     "derivative filter"
     n = length(x) # nt
     t, y = deepcopy(x), similar(x) # h, trace2

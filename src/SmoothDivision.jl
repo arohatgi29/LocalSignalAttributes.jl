@@ -5,11 +5,11 @@ function smooth_division(numerator::Array, denominator::Array, radius::Vector{In
     # normalization
     norm = denominator ⋅ denominator
     if norm == 0.0
-        return zeros(n, eltype(ratio))
+        return p0
     end
     norm = sqrt(n/norm)
     @show norm
     # weighting function
-    weight = x -> x .* denominator .* norm
-    return conjgrad(weight, weight, x -> smooth(x, radius), 1.0, numerator * norm, p0, niter; tolerance=1.0e-7)
+    weight(x) = x .* denominator * norm
+    return conjgrad(weight, weight, x -> smooth(x, radius), numerator * norm, p0; ϵ=1.0, niter=niter, tolerance=1.0e-7)
 end 

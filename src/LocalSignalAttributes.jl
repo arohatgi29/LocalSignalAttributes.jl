@@ -16,6 +16,16 @@ include("Smooth1D.jl")
 include("SmoothDivision.jl")
 include("Hilbert.jl")
 include("LocalFrequency.jl")
+include("LocalSimilarity.jl")
+include("WarpScan.jl")
+include("AmplitudeBalance.jl")
+include("FindMinimum.jl")
+include("DynamicProgramming.jl")
+include("interpolate.jl")
+include("DynamicProgTrajectory.jl")
+include("AutoPicking.jl")
+include("PartialSum.jl")
+include("InterLeave.jl")
 
 # Exports
 export conjgrad, 
@@ -23,5 +33,8 @@ export conjgrad,
        smooth, 
        smooth_division,
        hilbert,
-       local_frequency     
+       local_frequency,
+       local_similarity,
+       warpscan,
+       autopick          
 end
