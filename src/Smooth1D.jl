@@ -1,4 +1,4 @@
-function smooth(x::Vector{T}, nb::Int, der=false) where T <: Real
+function smooth1(x::Vector{T}, nb::Int, der=false) where T <: Real
     "smoothing by triangle filtering with reflecting boundaries"
     n = length(x)
     t = zeros(T,n+2*nb)

@@ -11,5 +11,5 @@ function smooth_division(numerator::Array, denominator::Array, radius::Vector{In
     @show norm
     # weighting function
     weight = x -> x .* denominator .* norm
-    return conjgrad(weight, weight, x -> smooth(x, radius), numerator * norm, p0; ϵ=1.0, niter=niter, tolerance=1.0e-7)
+    return conjgrad(weight, weight, x -> smooth(x, radius), 1.0, numerator * norm, p0, niter; tolerance=1.0e-7)
 end 
