@@ -25,7 +25,7 @@ using Test
    expected_output_conj = [-7.373967719272078, -34.70109831720396, -5.373967719272078, -7.869552947935355, 
                            -6.373967719272078,  -34.70109831720396, 0.0]
 
-   @test conjgrad(forward, adjoint, shaping, d, p0; ϵ, niter, tolerance) ≈ expected_output_conj
+   @test conjgrad(forward, adjoint, shaping, ϵ, d, p0, niter; tolerance=tolerance) ≈ expected_output_conj
 
 # [TEST CASE 3]: Test for smooth function
    input_smooth = [
