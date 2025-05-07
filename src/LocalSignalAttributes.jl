@@ -36,5 +36,5 @@ export conjgrad,
        local_frequency,
        local_similarity,
        warpscan,
-       autopick,
+       autopick
 end
