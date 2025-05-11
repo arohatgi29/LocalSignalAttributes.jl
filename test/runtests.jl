@@ -76,21 +76,19 @@ using Test
     @test output_hilbert ≈ expected_output_hilbert atol=1e-6
 
 # [TEST CASE 6]: Test for Local Frequency
-    time = range(start=-0.8, step=0.004, length=1424)
-    signal = cos.(10 * π * time .* (1 .+ 0.5 * time))
-    inst_signal = local_frequency1(signal, [1]; order=200, dt=0.004)
-
-    @test size(inst_signal) == size(signal)
-
-    expected_inst_signal_1 = 8.702030607025977e-12
-    expected_inst_signal_200 = 4.930558808579891
-    expected_inst_signal_400 = 8.979962425480627
-    expected_inst_signal_600 = 12.979998161034956
-    expected_inst_signal_800 = 16.979997596140944
-
-    @test isapprox(inst_signal[1], expected_inst_signal_1; atol=0.025, rtol=1e-6)
-    @test isapprox(inst_signal[200], expected_inst_signal_200; atol=0.025, rtol=1e-6)
-    @test isapprox(inst_signal[400], expected_inst_signal_400; atol=0.025, rtol=1e-6)
-    @test isapprox(inst_signal[600], expected_inst_signal_600; atol=0.025, rtol=1e-6)
-    @test isapprox(inst_signal[800], expected_inst_signal_800; atol=0.025, rtol=1e-6)
+   time = range(start=-0.8, step=0.004, length=1424)
+   signal = cos.(10π .* time .* (1 .+ 0.5 .* time))
+   signal2D = reshape(signal, :, 1)  # Convert to 2D array
+   inst_signal = local_frequency(signal2D, [1]; order=200, niter=300, dt=0.004)
+   @test size(inst_signal) == size(signal2D)
+   expected_inst_signal_1 = 8.702030607025977e-12
+   expected_inst_signal_200 = 4.930558808579891
+   expected_inst_signal_400 = 8.979962425480627
+   expected_inst_signal_600 = 12.979998161034956
+   expected_inst_signal_800 = 16.979997596140944
+   @test isapprox(inst_signal[1, 1], expected_inst_signal_1; atol=0.025, rtol=1e-6)
+   @test isapprox(inst_signal[200, 1], expected_inst_signal_200; atol=0.025, rtol=1e-6)
+   @test isapprox(inst_signal[400, 1], expected_inst_signal_400; atol=0.025, rtol=1e-6)
+   @test isapprox(inst_signal[600, 1], expected_inst_signal_600; atol=0.025, rtol=1e-6)
+   @test isapprox(inst_signal[800, 1], expected_inst_signal_800; atol=0.025, rtol=1e-6)
 end
