@@ -26,6 +26,11 @@ include("DynamicProgTrajectory.jl")
 include("AutoPicking.jl")
 include("PartialSum.jl")
 include("InterLeave.jl")
+include("Depth2Time.jl")
+include("InverseSpline.jl")
+include("PostFilter.jl")
+include("Regularization.jl")
+include("Trim.jl")
 
 # Exports
 export conjgrad, 
@@ -36,5 +41,6 @@ export conjgrad,
        local_frequency,
        local_similarity,
        warpscan,
-       autopick
+       autopick,
+       depth2time
 end
