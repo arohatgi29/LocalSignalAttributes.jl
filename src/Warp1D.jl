@@ -1,4 +1,4 @@
-using using Interpolations
+using Interpolations
 
 function warp1(inp, time, gamma)
 	n1, n2 = size(inp)
