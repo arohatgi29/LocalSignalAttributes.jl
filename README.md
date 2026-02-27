@@ -25,3 +25,11 @@ https://arohatgi29.github.io/LocalSignalAttributes.jl/dev/
 
 More information is available through the Julia package ecosystem:
 https://juliahub.com/ui/Packages/LocalSignalAttributes
+
+## Contribution
+
+Contributions, bug reports, and suggestions are welcome.
+If you would like to contribute, please feel free to open an issue or submit a pull request on GitHub.
+
+For questions, collaboration inquiries, or feedback, please contact:
+Akshika Rohatgi, akshikarohatgi@utexas.edu or Sergey Fomel, sergey.fomel@beg.utexas.edu
