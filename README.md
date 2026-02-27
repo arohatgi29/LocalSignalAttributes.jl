@@ -20,26 +20,10 @@ julia> Pkg.add("LocalSignalAttributes")
 julia> using LocalSignalAttributes
 ```
 
+## Documentation
 
-## Features
-
-### conjgrad
-
-- Conjugate-gradient algorithm for shaping regularization using `(forward::Function, adjoint::Function, shaping::Function, ϵ::Float64, d::Array, p0::Array, niter::Int)`
-
-### smooth
-
-- multidimensional smoothing based on triangle filter using `(x::Array, nb::Vector{Int})`
-
-
-### ricker
-
-- Creates a ricker wavelet using `(input::Array, dt::Float64, f::Float64)`
-
-### smooth_division
-
-- divides two signals, producing a smooth output using `(numerator::Array, denominator::Array, radius::Vector{Int}, niter::Int)`
-- It treats division as inversion and regularizes the inversion using shaping regularization. 
+More information is available through the Julia package ecosystem:
+https://juliahub.com/ui/Packages/LocalSignalAttributes
 
 ### hilbert
 
