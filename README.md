@@ -22,10 +22,7 @@ julia> using LocalSignalAttributes
 
 ## Documentation
 
+https://arohatgi29.github.io/LocalSignalAttributes.jl/dev/
+
 More information is available through the Julia package ecosystem:
 https://juliahub.com/ui/Packages/LocalSignalAttributes
-
-### hilbert
-
-- Digital Hilbert transform using  `(x::Vector{T}, order::Int)`
-
